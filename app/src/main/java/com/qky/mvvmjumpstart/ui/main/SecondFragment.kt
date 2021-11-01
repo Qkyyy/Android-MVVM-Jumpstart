@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.navGraphViewModels
 import com.qky.mvvmjumpstart.R
+import com.qky.mvvmjumpstart.databinding.SecondFragmentBinding
 
 class SecondFragment : Fragment() {
     private val viewModel: MainViewModel by navGraphViewModels(R.id.secondFragment)
+    private lateinit var binding: SecondFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.second_fragment, container, false)
+        binding = SecondFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 }
