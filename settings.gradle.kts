@@ -1,2 +1,2 @@
 rootProject.name = "MVVM Jumpstart"
-include ':app'
+include(":app")
