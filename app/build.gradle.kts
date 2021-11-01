@@ -1,6 +1,7 @@
 plugins {
-    id(BuildPlugins.androidApplication)
-    id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.androidApplicationPlugin)
+    id(BuildPlugins.kotlinAndroidPlugin)
+    id(BuildPlugins.safeArgsPlugin)
 }
 
 android {
@@ -39,6 +40,8 @@ dependencies {
     implementation(Dependencies.constraintLayout)
     implementation(Dependencies.liveData)
     implementation(Dependencies.viewModel)
+    implementation(Dependencies.navFragment)
+    implementation(Dependencies.navUiKtx)
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.extJunit)
     androidTestImplementation(Dependencies.espressoCore)

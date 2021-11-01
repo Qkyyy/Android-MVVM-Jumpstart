@@ -11,11 +11,13 @@ object Versions {
     const val junitVersion = "4.13.2"
     const val extJunitVersion = "1.1.3"
     const val espressoCoreVersion = "3.4.0"
+    const val navigationVersion = "2.3.5"
 }
 
 object BuildPlugins {
-    const val androidApplication = "com.android.application"
-    const val kotlinAndroid = "kotlin-android"
+    const val androidApplicationPlugin = "com.android.application"
+    const val kotlinAndroidPlugin = "kotlin-android"
+    const val safeArgsPlugin = "androidx.navigation.safeargs"
 }
 
 object Dependencies {
@@ -31,4 +33,7 @@ object Dependencies {
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
     const val buildGradle = "com.android.tools.build:gradle:${Versions.gradleVersion}"
     const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
+    const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+    const val navUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+    const val navSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
 }
