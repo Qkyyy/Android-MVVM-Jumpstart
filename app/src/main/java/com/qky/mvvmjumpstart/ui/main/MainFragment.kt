@@ -5,14 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navGraphViewModels
 import com.qky.mvvmjumpstart.R
 import com.qky.mvvmjumpstart.databinding.MainFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
-    private val viewModel: MainViewModel by navGraphViewModels(R.id.mainFragment)
+    private val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.mainFragment)
     private lateinit var binding: MainFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -21,6 +24,7 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        Toast.makeText(requireContext(), viewModel.getDummy(), Toast.LENGTH_LONG).show()
         binding.btnNext.setOnClickListener {
             val dir = MainFragmentDirections.actionMainFragmentToSecondFragment()
             findNavController().navigate(dir)

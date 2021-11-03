@@ -1,7 +1,9 @@
 plugins {
     id(BuildPlugins.androidApplicationPlugin)
     id(BuildPlugins.kotlinAndroidPlugin)
+    kotlin("kapt")
     id(BuildPlugins.safeArgsPlugin)
+    id(BuildPlugins.hiltPlugin)
 }
 
 android {
@@ -10,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.qky.mvvmjumpstart"
         minSdkVersion(21)
-        targetSdkVersion(31)
+        targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0.0"
 
@@ -41,7 +43,14 @@ dependencies {
     implementation(Dependencies.viewModel)
     implementation(Dependencies.navFragment)
     implementation(Dependencies.navUiKtx)
+    implementation(Dependencies.hilt)
+    implementation(Dependencies.hiltNavFragment)
+    kapt(Dependencies.hiltCompiler)
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.extJunit)
     androidTestImplementation(Dependencies.espressoCore)
+}
+
+kapt {
+    correctErrorTypes = true
 }

@@ -12,12 +12,15 @@ object Versions {
     const val extJunitVersion = "1.1.3"
     const val espressoCoreVersion = "3.4.0"
     const val navigationVersion = "2.3.5"
+    const val hiltVersion = "2.38.1"
+    const val hiltNavFragmentVersion = "1.0.0"
 }
 
 object BuildPlugins {
     const val androidApplicationPlugin = "com.android.application"
     const val kotlinAndroidPlugin = "kotlin-android"
     const val safeArgsPlugin = "androidx.navigation.safeargs"
+    const val hiltPlugin = "dagger.hilt.android.plugin"
 }
 
 object Dependencies {
@@ -36,4 +39,9 @@ object Dependencies {
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
     const val navUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
     const val navSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
+    const val hiltGradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val hiltNavFragment = "androidx.hilt:hilt-navigation-fragment:${Versions.hiltNavFragmentVersion}"
+
 }
