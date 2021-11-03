@@ -1,4 +1,4 @@
-package com.qky.mvvmjumpstart.ui.main
+package com.qky.mvvmjumpstart.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.qky.mvvmjumpstart.R
 import com.qky.mvvmjumpstart.databinding.MainFragmentBinding
+import com.qky.mvvmjumpstart.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

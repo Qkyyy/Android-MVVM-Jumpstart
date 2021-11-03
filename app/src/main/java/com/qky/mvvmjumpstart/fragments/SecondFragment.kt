@@ -1,4 +1,4 @@
-package com.qky.mvvmjumpstart.ui.main
+package com.qky.mvvmjumpstart.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import com.qky.mvvmjumpstart.R
 import com.qky.mvvmjumpstart.databinding.SecondFragmentBinding
+import com.qky.mvvmjumpstart.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

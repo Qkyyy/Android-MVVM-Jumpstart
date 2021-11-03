@@ -1,4 +1,4 @@
-package com.qky.mvvmjumpstart.ui.main
+package com.qky.mvvmjumpstart.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.qky.mvvmjumpstart.repositories.DummyRepository
