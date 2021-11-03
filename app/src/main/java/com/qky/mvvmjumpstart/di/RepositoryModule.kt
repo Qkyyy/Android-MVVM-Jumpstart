@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
-object DummyModule {
+object RepositoryModule {
     @Provides
     @Singleton
     fun provideDummyRepository(): DummyRepository {
