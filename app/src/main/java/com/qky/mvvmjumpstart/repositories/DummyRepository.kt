@@ -13,4 +13,10 @@ class DummyRepository {
             emit("dummy data") //mock API call
         }
     }
+
+    suspend fun getAnotherDummyData(): Flow<String> = withContext(Dispatchers.IO) {
+        flow {
+            emit("another dummy data")
+        }
+    }
 }
