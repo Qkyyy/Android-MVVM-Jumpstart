@@ -22,7 +22,10 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     buildFeatures {
@@ -45,6 +48,14 @@ dependencies {
     implementation(Dependencies.navUiKtx)
     implementation(Dependencies.hilt)
     implementation(Dependencies.hiltNavFragment)
+    implementation(Dependencies.corbind)
+    implementation(Dependencies.corbindActivity)
+    implementation(Dependencies.corbindCore)
+    implementation(Dependencies.corbindLifecycle)
+    implementation(Dependencies.corbindNavigation)
+    implementation(Dependencies.corbindRecyclerView)
+    implementation(Dependencies.corbindSwipeRefresh)
+    implementation(Dependencies.corbindMaterial)
     kapt(Dependencies.hiltCompiler)
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.extJunit)

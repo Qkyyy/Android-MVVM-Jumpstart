@@ -13,7 +13,11 @@ import com.qky.mvvmjumpstart.R
 import com.qky.mvvmjumpstart.databinding.MainFragmentBinding
 import com.qky.mvvmjumpstart.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import ru.ldralighieri.corbind.view.clicks
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -31,10 +35,10 @@ class MainFragment : Fragment() {
             Toast.makeText(requireContext(), viewModel.getDummy(), Toast.LENGTH_LONG).show()
         }
 
-        binding.btnNext.setOnClickListener {
-            val dir = MainFragmentDirections.actionMainFragmentToSecondFragment()
-            findNavController().navigate(dir)
-        }
+        binding.btnNext.clicks()
+            .map { MainFragmentDirections.actionMainFragmentToSecondFragment() }
+            .onEach { findNavController().navigate(it) }
+            .launchIn(viewLifecycleOwner.lifecycleScope)
     }
 
 }

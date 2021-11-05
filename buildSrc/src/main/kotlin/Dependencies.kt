@@ -14,6 +14,7 @@ object Versions {
     const val navigationVersion = "2.3.5"
     const val hiltVersion = "2.38.1"
     const val hiltNavFragmentVersion = "1.0.0"
+    const val corbindVersion = "1.5.2"
 }
 
 object BuildPlugins {
@@ -43,5 +44,12 @@ object Dependencies {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
     const val hiltNavFragment = "androidx.hilt:hilt-navigation-fragment:${Versions.hiltNavFragmentVersion}"
-
+    const val corbind = "ru.ldralighieri.corbind:corbind:${Versions.corbindVersion}"
+    const val corbindActivity = "ru.ldralighieri.corbind:corbind-activity:${Versions.corbindVersion}"
+    const val corbindCore = "ru.ldralighieri.corbind:corbind-core:${Versions.corbindVersion}"
+    const val corbindLifecycle = "ru.ldralighieri.corbind:corbind-lifecycle:${Versions.corbindVersion}"
+    const val corbindNavigation = "ru.ldralighieri.corbind:corbind-navigation:${Versions.corbindVersion}"
+    const val corbindRecyclerView = "ru.ldralighieri.corbind:corbind-recyclerview:${Versions.corbindVersion}"
+    const val corbindSwipeRefresh = "ru.ldralighieri.corbind:corbind-swiperefreshlayout:${Versions.corbindVersion}"
+    const val corbindMaterial = "ru.ldralighieri.corbind:corbind-material:${Versions.corbindVersion}"
 }
