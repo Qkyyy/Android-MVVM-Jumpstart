@@ -15,6 +15,8 @@ object Versions {
     const val hiltVersion = "2.38.1"
     const val hiltNavFragmentVersion = "1.0.0"
     const val corbindVersion = "1.5.2"
+    const val leakCanaryVersion = "2.7"
+    const val timberVersion = "5.0.1"
 }
 
 object BuildPlugins {
@@ -52,4 +54,6 @@ object Dependencies {
     const val corbindRecyclerView = "ru.ldralighieri.corbind:corbind-recyclerview:${Versions.corbindVersion}"
     const val corbindSwipeRefresh = "ru.ldralighieri.corbind:corbind-swiperefreshlayout:${Versions.corbindVersion}"
     const val corbindMaterial = "ru.ldralighieri.corbind:corbind-material:${Versions.corbindVersion}"
+    const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanaryVersion}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
 }

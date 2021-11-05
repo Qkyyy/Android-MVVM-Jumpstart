@@ -56,6 +56,8 @@ dependencies {
     implementation(Dependencies.corbindRecyclerView)
     implementation(Dependencies.corbindSwipeRefresh)
     implementation(Dependencies.corbindMaterial)
+    debugImplementation(Dependencies.leakCanary)
+    debugImplementation(Dependencies.timber)
     kapt(Dependencies.hiltCompiler)
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.extJunit)

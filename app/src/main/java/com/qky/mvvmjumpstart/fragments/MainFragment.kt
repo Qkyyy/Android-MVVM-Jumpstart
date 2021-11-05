@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import ru.ldralighieri.corbind.view.clicks
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -38,6 +39,7 @@ class MainFragment : Fragment() {
         binding.btnNext.clicks()
             .map { MainFragmentDirections.actionMainFragmentToSecondFragment() }
             .onEach { findNavController().navigate(it) }
+            .onEach { Timber.d("btn clicked") }
             .launchIn(viewLifecycleOwner.lifecycleScope)
     }
 
